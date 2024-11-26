@@ -1,0 +1,95 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    height: 70px; /* Fixed height for navbar */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%; /* Ensure link container is same height as navbar */
+}
+
+.navbar-logo {
+    width: 200px;
+    height: auto; 
+    cursor: pointer;
+    max-width: 100%; 
+}
+
+.navbar-menu-left,
+.navbar-menu-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu-left {
+    margin-left: 80px; 
+    gap: 55px;
+}
+
+.navbar-menu-left a {
+    color: #5f6063;
+    text-decoration: none; 
+}
+
+.navbar-menu-left a:hover {
+    color: #171717;
+}
+
+.navbar-menu-right {
+    margin-left: auto;
+}
+
+.navbar-menu-right a {
+    text-decoration: none;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.button-link {
+    color: white !important;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.button-link-login {
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.button-link:hover,
+.button-link:focus {
+    background-color: #32ad00;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu-left,
+    .navbar-menu-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-menu-right {
+        margin-left: 0;
+    }
+}
