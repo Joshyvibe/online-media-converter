@@ -7,8 +7,6 @@ import yt_dlp
 from django.utils.text import slugify
 
 
-
-
 class VideoInfo(APIView):
     def post(self, request, *args, **kwargs):
         url = request.data.get('url')
