@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from "axios";
+import api from "../api";
 import "../styles/Home.css";
 
 
@@ -15,7 +15,7 @@ const Home = () => {
     const fetchVideoInfo = async (url) => {
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:8000/get-video-info/', {url});
+            const response = await api.post('/get-video-info/', {url});
             setVideoInfo(response.data);
             setError('')
         } catch (error) {
@@ -35,7 +35,7 @@ const Home = () => {
 
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:8000/convert/', formData, {
+            const response = await api.post('/convert/', formData, {
                 headers: {
                     'Content-Type':'multipart/form-data'
                 }
